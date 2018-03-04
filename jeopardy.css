@@ -1,0 +1,154 @@
+/*jeopardy.css*/
+
+body{
+	background-color: black;
+	width:1680px;
+    height:1050px;
+}
+.square{
+	border-radius: 25px;
+	background-color: blue;
+	border-style: solid;
+	border-width: 4px;
+	width:180px;
+	height: 140px;
+	text-align: center;
+	justify-content: center;
+	float:left;
+	
+}
+#catagories{
+	font-weight: bold;
+	font-size: 40px;
+	color:white;
+}
+
+#board{
+	margin: 20px auto;
+	padding: 20px;
+
+}
+#catagories2{
+	font-weight: bold;
+	font-size: 50px;
+	color:yellow;
+}
+#catagories3{
+	font-weight: normal;
+	font-size: 15px;
+	color:yellow;
+}
+#one{
+border-bottom-width: 8px;
+}
+
+#title{
+	color: yellow;
+	text-align: center;
+	font-size: 70px;
+	font-family: impact;
+}
+#title2{
+	font-size: 20px;
+	color: white;
+	font-family: monospace;
+}
+
+#directions{
+	color: white;
+	text-align: center;
+	font-size: 20px;
+	font-family: monospace;
+}
+
+#directions2{
+	color: yellow;
+}
+#link{
+	width: 300px;
+	bottom: -100%;
+	left: -70%;
+
+}
+
+.button {
+  padding: 5px 15px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;  
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px grey;
+}
+
+#content {
+  display: none;
+}
+input[type="text"]{
+  width: 42px;  height: 10px;
+  padding: 5px 15px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;  
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px grey;
+}
+input[type="text"]:focus{
+    outline: none;
+}
+input:focus + div#content {
+	display: block;
+}
+
+input:hover {
+	background-color: limegreen;
+}
+
+input:active {
+  background-color: green;
+  box-shadow: 0 5px grey;
+  transform: translateY(4px);
+}
+
+
+.flip-format{
+	background-color: black;
+	border-style: solid;
+	border-width: 4px;
+	width:180px;
+	height: 140px;
+	text-align: center;
+	justify-content: center;
+	float:left;
+}
+.category-header{
+	margin: auto;
+    width: 70%;
+    padding: 50px;
+}
+
+.flip-format > .front{
+	position: absolute;
+	transform: perspective(600px) rotateY(0deg);
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+}
+.flip-format > .back{
+	position: absolute;
+	transform: perspective(600px) rotateY(180deg);
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+
+}
+.flip-format:hover > .front{
+	transform: perspective(600px) rotateY(-180deg);
+	transition-delay: 2s;
+	
+}
+.flip-format:hover > .back{
+	transform: perspective(600px) rotateY(0deg);
+	transition-delay: 2s;
+}
